@@ -1,0 +1,275 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>🤩Gridea+Dev-sidecar+GitHub白嫖个人博客 | 欢迎来到艺术家的代码世界</title>
+
+<link rel="shortcut icon" href="https://JHome17.github.io/favicon.ico?v=1681822643089">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://JHome17.github.io/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            欢迎来到艺术家的代码世界
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1681822643089"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    🤩Gridea+Dev-sidecar+GitHub白嫖个人博客
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-05-07 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="2022年5月20日更新gridea093版本可以使用gridea自带的代理配置以此解决同步问题即不需要看二-同步失败那一章节啦~093版本的测试环境为mac客户端">2022年5月20日，更新Gridea0.9.3版本，可以使用Gridea自带的代理配置，以此解决同步问题，即不需要看“二、同步失败”那一章节啦～0.9.3版本的测试环境为Mac客户端。</h1>
+<p>配置如下：</p>
+<ol>
+<li>
+<p>查看Http代理原理：配合Gridea0.9.3加速github网速<br>
+<img src="https://JHome17.github.io/post-images/1669898354585.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>查看所用代理的端口：两个端口号测试一下，哪个可以填哪个<br>
+<img src="https://JHome17.github.io/post-images/1669898383784.jpg" alt="" loading="lazy"><br>
+上面这个是mac下的VPN代理界面</p>
+<p>下面这个是Win下的VPN代理界面，看下方最后一行，第二个Http：127.0.01:10809，是正确的配置端口。<br>
+<img src="https://JHome17.github.io/post-images/1670243435379.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在Griea里面配置Http代理<br>
+<img src="https://JHome17.github.io/post-images/1669898604061.jpg" alt="" loading="lazy"><br>
+上面这个截图是mac里面的Gridea</p>
+</li>
+<li>
+<p>梯子里面的设置：Pac和全局模式都可以不用特地更改<br>
+<img src="https://JHome17.github.io/post-images/1669898655649.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h1 id="参考链接">参考链接</h1>
+<p><a href="https://gridea.dev/gridea-start/">官方文档：快速上手</a><br>
+<a href="https://zhuanlan.zhihu.com/p/406234933">Gridea 同步失败解决方法</a><br>
+<a href="https://blog.gd1214b.icu/post/F2_C5EVQh/p">解决Gridea同步失败的问题</a><br>
+<a href="https://www.bilibili.com/video/BV1tr4y1e75b/?spm_id_from=333.999.0.0&amp;vd_source=1bd6cd08b51f8278e3e75aebeae3f1e2">解决Gridea同步失败</a></p>
+<h1 id="工具下载地址">工具下载地址</h1>
+<p><a href="https://pan.quark.cn/s/19f8b4a0c790">Gridea工具（大佬修改版）</a><br>
+<a href="https://github.com/docmirror/dev-sidecar">开发者边车：加速GitHub同步</a><br>
+<a href="https://desktop.github.com/">桌面版GitHub：用于解决同步问题</a></p>
+<h1 id="一-配置-注册github-token-检测远程连接-同步">一、配置-注册GitHub-Token-检测远程连接-同步</h1>
+<h2 id="安装gridea">安装Gridea</h2>
+<p><s><a href="https://gridea.dev/">安装Gridea（正常官网v0.9.2，会有同步失败问题）</a></s><br>
+<s><a href="https://github.com/getgridea/gridea/issues/890">安装Gridea（正常官网v0.9.2修改版，Netlify 与系统代理，我没有测试）</a></s><br>
+<a href="https://zhuanlan.zhihu.com/p/406234933">安装Gridea（大佬的修改版）</a></p>
+<h2 id="配置和发布">配置和发布</h2>
+<ol>
+<li>创建 GitHub 账号，并创建一个仓库 Token。点击<a href="https://github.com/">GitHub</a>，进行注册。登录 GitHub 之后，点击<a href="https://github.com/settings/tokens/new">这里</a>创建一个 Token，勾选上 repo 的相关权限即可。生成之后记得把 Token 复制到你的本地，因为一旦关闭网页将不能再看到它。<br>
+<img src="https://JHome17.github.io/post-images/1651935883399.jpg" alt="" loading="lazy"></li>
+<li>创建仓库，存放构建后的网站文件。创建一个公开仓库，名为用户名.github.io。（将用户名替换为你的 GitHub 用户名）<br>
+<img src="https://JHome17.github.io/post-images/1651936588773.jpg" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1651936593078.jpg" alt="" loading="lazy"></li>
+<li>进入 Gridea 进行远程设置。按照下图的示例进行设置，然后点击「检测远程链接」，进行配置检查。<br>
+<img src="https://JHome17.github.io/post-images/1651936598606.jpg" alt="" loading="lazy"></li>
+<li>同步。点击 Gridea 中的 同步按钮即可。初次部署等待几分钟之后就可以去浏览器访问了，默认地址为你在第 3 步所填写的域名。</li>
+</ol>
+<p>以上就可以拥有一个自己的静态博客啦~</p>
+<h2 id="gridea主题更换">Gridea主题更换</h2>
+<ol>
+<li><a href="https://gridea.dev/themes">主题文件下载</a></li>
+<li>主题安装，下载完解压后放入themes文件夹，目录如下图；确保解压后的主题文件夹打开就又config.jon和style-override.js，否则会影响“预览”，即主题安装不成功。<br>
+<img src="https://JHome17.github.io/post-images/1651936839636.jpg" alt="" loading="lazy"></li>
+<li>切换主题<br>
+<img src="https://JHome17.github.io/post-images/1651936969059.jpg" alt="" loading="lazy"></li>
+</ol>
+<h1 id="二-同步失败检测远程链接成功同步失败为网络问题">二、同步失败（检测远程链接成功，同步失败为网络问题）</h1>
+<h2 id="前言">前言</h2>
+<p>由于众所周知的原因，GitHub在中国大陆地区受到的干扰严重，大部分情况下根本无法连接，这也导致Gridea的同步失败问题。此方法用于同步失败，控制台报错：<code>ETIMEOUT</code> 与 <code>ECONNREST</code><br>
+<img src="https://JHome17.github.io/post-images/1651934577241.png" alt="" loading="lazy"></p>
+<h2 id="解决方案">解决方案</h2>
+<p>通常的解决方案是通过代理服务器连接，但由于大部分的代理软件（如v2rayN等），只能更改系统的代理设置，，像Gridea这些不遵守系统代理设置的软件，无法通过代理服务器连接。<br>
+下面介绍一种本人亲测有效的方法, 这种方法的基本原理是用GitHub Desktop将Gridea生成的网页源代码手动push到GitHub上</p>
+<h3 id="第一步-连接上代理开发者边车工具">第一步 连接上代理（开发者边车工具）</h3>
+<p>由于 Gridea 0.9.2 使用的是新的内置 git，使用开发者边车工具没法代理它。所以我们得改一下。（原作者自己改了Gridea的安装包，我现在用的就是这个，第一次使用GitHub Desktop 手动push之后，就可以用Gridea自己的同步功能同步成功了）<br>
+<strong>需自己已单独安装了 Git</strong>，使用Dev-sidecar时，打开软件的Git.exe代理。<br>
+具体内容看边车工具主页：<a href="https://github.com/docmirror/dev-sidecar">dev-sidecar开发者边车</a></p>
+<h4 id="原作者的修改安装包方法如下">原作者的修改安装包方法如下：</h4>
+<p>自己动手编译：已安装 Node.js、Git、yarn</p>
+<pre><code>Node.js 版本需大于 v10.0.
+git clone https://github.com/getgridea/gridea.git
+cd gridea
+</code></pre>
+<p>此时把文件<code>packege.json</code>里的<code>&quot;isomorphic-git&quot;: &quot;^0.78.3&quot;</code>,替换为<code>&quot;simple-git&quot;: &quot;^1.107.0&quot;</code>,。</p>
+<p>未安装 yarn 先 <code>npm install -g yarn</code>安装，然后到 Github 切换 Tags 把 0.9.1 版本的 <code>gridea\src\server\deploy.ts</code>复制到新版本里覆盖。</p>
+<pre><code>yarn
+yarn electron:serve
+yarn electron:build
+</code></pre>
+<p>命令行跑完后在<code>\gridea\dist_electron</code>找到安装包<br>
+<a href="https://pan.quark.cn/s/19f8b4a0c790">修改后的懒人安装包在这里</a></p>
+<h3 id="第二步-下载并安装github-desktop">第二步 下载并安装GitHub Desktop</h3>
+<p><a href="https://desktop.github.com/">下载地址</a></p>
+<h3 id="第三步-登陆github账号">第三步 登陆GitHub账号</h3>
+<ol>
+<li>点击 Sign into GitHub.com<br>
+<img src="https://JHome17.github.io/post-images/1651938342851.jpg" alt="" loading="lazy"></li>
+<li>在浏览器里登陆你的GitHub账号<br>
+<img src="https://JHome17.github.io/post-images/1651938627440.jpg" alt="" loading="lazy"></li>
+</ol>
+<h3 id="第四步-清空gridea-配置目录下ouput文件夹里的所有内容">第四步 清空Gridea 配置目录下ouput文件夹里的所有内容</h3>
+<blockquote>
+<p>需要清空ouput文件夹里的所有内容的原因是GitHub Desktop无法克隆仓库到非空文件夹中，这一步不会影响你的博客数据。<br>
+<strong>注意output文件夹不要删除</strong><br>
+<img src="https://JHome17.github.io/post-images/1651938847702.jpg" alt="" loading="lazy"></p>
+</blockquote>
+<h3 id="第五步-在github-desktop中克隆你的博客仓库">第五步 在GitHub Desktop中克隆你的博客仓库</h3>
+<p><img src="https://JHome17.github.io/post-images/1651938895081.jpg" alt="" loading="lazy"><br>
+<strong>注意目录要选择Gridea 配置目录下ouput文件夹</strong> 由于我操作过了，不知道怎么再来一次，所以用了原博主的截图。<br>
+<img src="https://JHome17.github.io/post-images/1651939319908.jpg" alt="" loading="lazy"></p>
+<h3 id="第六步-同步gridea">第六步 同步Gridea</h3>
+<p>在Gridea中依次点击 远程 &gt; 检测远程连接 &gt; 同步（同步之前也可以预览一下）<br>
+这一步无所谓是否同步成功。只是让Gridea生成要发布的内容，我们是要把这个发布的内容同步到GitHub上的。<br>
+<img src="https://JHome17.github.io/post-images/1651939492648.jpg" alt="" loading="lazy"></p>
+<h3 id="第七步-同步到github上">第七步 同步到GitHub上</h3>
+<p>在GitHub Desktop 中点击 Pushu origin。<br>
+<img src="https://JHome17.github.io/post-images/1651941394810.jpg" alt="" loading="lazy"></p>
+<p>如果有更新的内容，则需要输入<code>main</code>，再点<code>Commit to main</code>，才会出现Pushu origin按钮。<br>
+<img src="https://JHome17.github.io/post-images/1651939716160.jpg" alt="" loading="lazy"><br>
+等候完成即可。<br>
+<strong>用GitHub Desktop还是用Gridea，都要在开始Dev-sidecar，并且打开git.exe代理下，进行同步。</strong><br>
+<img src="https://JHome17.github.io/post-images/1651983995790.jpg" alt="" loading="lazy"><br>
+之后就可以用GitHub Desktop同步啦~或者可以试试Gridea自己的同步。<br>
+<img src="https://JHome17.github.io/post-images/1651941147115.jpg" alt="" loading="lazy"></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">艺术与代码，机械艺术</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://JHome17.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

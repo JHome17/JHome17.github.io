@@ -1,0 +1,484 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>😈Hexo配置静态网站（2022年12月新版） | 欢迎来到艺术家的代码世界</title>
+
+<link rel="shortcut icon" href="https://JHome17.github.io/favicon.ico?v=1681822643089">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://JHome17.github.io/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            欢迎来到艺术家的代码世界
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1681822643089"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    😈Hexo配置静态网站（2022年12月新版）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-12-05 ·
+                    </time>
+                    
+                        <a href="https://JHome17.github.io/tag/74pk0gwjE/" class="post-tags">
+                            # 代码教程
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><ul class="markdownIt-TOC">
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E8%AD%A6%E5%91%8A">警告</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E6%80%9D%E8%B7%AF%E5%9B%BE">部署思路图</a></li>
+<li><a href="#%E9%9A%BE%E5%BA%A6%E5%88%86%E7%BA%A7%E4%B8%80%E6%98%9F">难度分级：一星</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA%E6%80%9D%E8%B7%AF">搭建思路</a></li>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5nodejs%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE">第一步：nodejs安装和配置</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5git%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE">第二步：git安装和配置</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83%E9%AA%8C%E8%AF%81%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E5%A5%BDnodejs%E5%92%8Cgit">环境验证：验证是否安装好nodejs和git</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E6%AD%A5hexo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE">第三步：hexo的安装和配置</a>
+<ul>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结：</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E6%B3%A8%E5%86%8C-%E4%B8%80%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E4%B8%8D%E4%BC%9A%E7%9A%84%E8%87%AA%E8%A1%8C%E7%99%BE%E5%BA%A6%E6%B3%A8%E5%86%8C%E5%90%8D%E9%82%AE%E7%AE%B1%E5%AF%86%E7%A0%81%E5%AF%B9%E4%BA%8E%E6%9C%AC%E6%AC%A1%E5%8D%9A%E5%AE%A2%E7%89%B9%E5%88%AB%E9%87%8D%E8%A6%81">第四步注册  一个GitHub账号，不会的自行百度（注册名+邮箱+密码对于本次博客特别重要）</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%E5%88%9D%E5%A7%8B%E5%8C%96hexo%E5%88%B0%E6%9C%AC%E5%9C%B0">第五步初始化Hexo到本地</a>
+<ul>
+<li><a href="#%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%83%A8%E7%BD%B2-hexo-%E6%A1%86%E6%9E%B6%E5%B9%B6%E7%94%9F%E6%88%90-demo-%E7%BD%91%E7%AB%99%E4%BB%A5%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%AE%BF%E9%97%AE%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8">在指定文件夹下部署 hexo 框架，并生成 Demo 网站以测试本地访问是否正常</a></li>
+<li><a href="#%E8%BF%99%E6%AD%A5%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84-hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">这步会用到的 hexo 常用命令</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E6%AD%A5github%E6%96%B0%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BE%88%E9%87%8D%E8%A6%81">第六步GitHub新建代码仓💕（很重要）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E6%AD%A5%E7%BB%91%E5%AE%9Assh%E7%A7%98%E9%92%A5">第七步绑定ssh秘钥</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E6%AD%A5%E4%B8%BAhexo%E9%93%BE%E6%8E%A5%E5%88%B0github%E8%80%8C%E5%81%9A%E7%9A%84%E9%85%8D%E7%BD%AE">第八步为Hexo链接到GitHub而做的配置</a></li>
+<li><a href="#hexo%E7%BD%91%E7%AB%99%E7%9A%84%E4%BF%AE%E6%94%B9%E7%BD%91%E9%A1%B5%E7%9A%84%E8%83%8C%E6%99%AF%E9%A1%B5%E9%9D%A2%E5%B0%BA%E5%AF%B8%E7%AD%89%E4%BF%AE%E6%94%B9">hexo网站的修改（网页的背景，页面尺寸等修改）</a></li>
+</ul>
+</p>
+<h1 id="前言">前言</h1>
+<blockquote>
+<p>前言：分三个部分，git部分，hexo部分，静态网页的修改，写文章和上传图片（用的老王图床，后面会换成存在本地）；附：老王图床：<a href="https://img.gejiba.com/">https://img.gejiba.com/</a></p>
+</blockquote>
+<blockquote>
+<p>参考教程：<a href="https://tommyzeng.com/pages/31689e/#%E5%89%8D%E8%A8%80">https://tommyzeng.com/pages/31689e/#前言</a><br>
+B站视频链接：<a href="https://www.bilibili.com/video/BV1mU4y1j72n/?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click">https://www.bilibili.com/video/BV1mU4y1j72n/?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click</a><br>
+视频已经保存在网盘啦！<a href="https://pan.quark.cn/s/05e6a9b0ba55">https://pan.quark.cn/s/05e6a9b0ba55</a></p>
+</blockquote>
+<blockquote>
+<p>** cmd怎么以管理员身份运行 **<br>
+<code>Win+R</code>，输入cmd，<code>ctrl+shift+enter</code></p>
+</blockquote>
+<blockquote>
+<p>资料链接：<br>
+git官网下载：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>
+git淘宝镜像：<a href="https://registry.npmmirror.com/binary.html?path=git-for-windows/">https://registry.npmmirror.com/binary.html?path=git-for-windows/</a><br>
+git镜像来源：<a href="https://blog.csdn.net/qingbo_2920249511/article/details/121465228">https://blog.csdn.net/qingbo_2920249511/article/details/121465228</a><br>
+nodejs下载：<a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+</blockquote>
+<blockquote>
+<p>静态网站相较于动态网站没有背后的数据库，所以约等于一个用代码生成的图形页面。这样子的优点是成本很低，可以直接部署在 Github 或者 Gitee 上。目前非常多的静态网站使用的框架是 Hexo，相关的资源非常多，且成本低廉可依靠开源平台免费部署并做到自动负载均衡，是新手入坑的不二之选。<br>
+1、自动负载均衡可以理解为不用担心有人恶意攻击你的服务器，因为是部署在 Github 等大型平台上，网站已经帮你做好了相关工作<br>
+2、本教程时 hexo 框架部署的最新教程， 时间坐标 2022 年 3 月 21 日， 请注意时效， 从目前情况看很多教程乃至 2021 年 8 月的教程都不一定适用， 所以相应的操作教程最好找最新的。</p>
+</blockquote>
+<blockquote>
+<p>本文是弄Hexo博客时期写的了，教程方法在（2022.10.16）依旧可行，有想做一个简单的静态网站的可以尝试。Hexo相对来说没Vue那么强的高度可自定义性，这是我转为Vuepress的主要原因</p>
+</blockquote>
+<h1 id="警告">警告</h1>
+<p><strong>必须在隐藏文件 config 文件下加入 user 信息， 填写个人 github id 和邮箱</strong></p>
+<h1 id="部署思路图">部署思路图</h1>
+<figure data-type="image" tabindex="1"><img src="https://JHome17.github.io/post-images/1670251880356.jpg" alt="" loading="lazy"></figure>
+<h1 id="难度分级一星">难度分级：一星</h1>
+<p>不需要什么编程基础，不过需要些计算机操作知识 ( 主要是 CMD/PowerShell 方面 ) ，过程中可能会遇到很多错误 ( 主要是因为电脑没配置控制台相关的框架和设置所致 ) ，但由于前者众多，所有问题都可以在百度搜出来</p>
+<blockquote>
+<p>Tips<br>
+如果搜不出来要多尝试不同的关键词，不到万不得已不去提问 ( 逼自己一把 ) 。要知道这是提高自己自主解决问题及检索关键词凝练能力的绝佳机会，要牢记成为大佬的路大多数得靠自己检索，问别人是解决问题时非常低效的方法且浪费了提高关键词提炼能力的机会</p>
+</blockquote>
+<h1 id="搭建思路">搭建思路</h1>
+<p>安装好 Node.js 和 Git 后根据国内特定网络环境， 可以安装 cnpm ( 中国版 npm ) 以更佳方便的安装hexo框架</p>
+<ol>
+<li>
+<p>使用 npm/cnpm 安装 hexo 框架</p>
+</li>
+<li>
+<p>hexo 框架初始化， 省成本地网页文件</p>
+</li>
+<li>
+<p>Github/Gitee 建立仓库对应仓库， 并使用 Git 生成专属的 SSH 密钥与各个账户连接</p>
+</li>
+<li>
+<p>配置本地 hexo 内的网路参数：如账号， 网址链接等信息</p>
+</li>
+<li>
+<p>使用终端命令上传部署 hexo, 实现网址访问效果</p>
+</li>
+</ol>
+<h1 id="前期准备">前期准备</h1>
+<p>环境配置可以理解成盖房子，系统就是人在计算机这个平台内创建的一个世界，而各种环境配置则可以理解成盖房子前的打地基以及各种预埋的水管电路，在这个基础上才好进行建设，以实现自己向要的效果</p>
+<blockquote>
+<p>Node.js<br>
+一个基于 Chrome V8 引擎的 JavaScript 运行环境，可以让 js 具有和别的平台性语言同台竞争的机会<br>
+下载地址： Node.js <a href="https://nodejs.org/">https://nodejs.org/</a> 下载长期维护版即可<br>
+安装时 Node 会自动安装 npm ( nodepackage manager ) 帮助用户管理各类插件<br>
+具体安装文档请参考这篇文章：<a href="https://www.cnblogs.com/liuqiyun/p/8133904.html">nodejs安装</a>，大佬的这篇文章已经搬运至本播客。</p>
+</blockquote>
+<blockquote>
+<p>Git<br>
+这是一款非常强大的版本管理软件，不只是可以用于 hexo 部署，还可以管理各类 GitHub 的仓库项目 ( 上传下载 ) 。可以这么说，初学者要想玩转 Github 绝对不能不用 Git。<br>
+下载地址：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>
+建议下载 Standalone Installer 版本<br>
+<img src="https://JHome17.github.io/post-images/1670341336854.png" alt="" loading="lazy"></p>
+</blockquote>
+<h1 id="第一步nodejs安装和配置">第一步：nodejs安装和配置</h1>
+<p>安装教程：<a href="https://www.cnblogs.com/liuqiyun/p/8133904.html">nodejs安装</a></p>
+<h1 id="第二步git安装和配置">第二步：git安装和配置</h1>
+<p>安装教程：<a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">Git安装教程</a></p>
+<h1 id="环境验证验证是否安装好nodejs和git">环境验证：验证是否安装好nodejs和git</h1>
+<p>使用 Powershell 或者 CMD 的命令行终端，输入代码后查询<br>
+<code>//版本查询代码，显示出版本表示安装成功</code><br>
+<code>node -v</code><br>
+<code>npm -v</code><br>
+<code>git --version</code><br>
+<img src="https://JHome17.github.io/post-images/1670341391344.png" alt="" loading="lazy"></p>
+<h1 id="第三步hexo的安装和配置">第三步：hexo的安装和配置</h1>
+<p>在 cmd 窗口输入以下代码，以启动 hexo 框架部署程序 ( 这里指的是部署脚本，可以在指定路径下部署 hexo 网页的文件 )（npm为nodejs的命令。）<br>
+<code>npm install hexo-cli -g</code></p>
+<p>如果网络不可以就装国内的淘宝源头<br>
+<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>
+再将上面的执行命令中的 <code>npm</code> 改为 <code>cnpm</code> 执行即可：<br>
+<code>cnpm install hexo-cli -g</code></p>
+<p>安装成功：<br>
+<img src="https://JHome17.github.io/post-images/1670344030311.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>常见报错<br>
+问题: 提示系统中禁止运行脚本的方法<br>
+在 <code>win+i </code>设置界面中搜索 <code>power</code> 在开发者选项中找到选项勾选并点击应用即可<br>
+<img src="https://JHome17.github.io/post-images/1670343859652.png" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670343866107.png" alt="" loading="lazy"></p>
+</blockquote>
+<h2 id="小结">小结：</h2>
+<ol>
+<li>配置环境：Git和nodejs；</li>
+<li>安装Hexo：<code>npm install hexo-cli -g</code></li>
+<li>验证是否安装成功：<br>
+<code>node -v</code><br>
+<code>npm -v</code><br>
+<code>git --version</code><br>
+<code>hexo -v</code></li>
+</ol>
+<h1 id="第四步注册-一个github账号不会的自行百度注册名邮箱密码对于本次博客特别重要">第四步注册  一个GitHub账号，不会的自行百度（注册名+邮箱+密码对于本次博客特别重要）</h1>
+<h1 id="第五步初始化hexo到本地">第五步初始化Hexo到本地</h1>
+<h2 id="在指定文件夹下部署-hexo-框架并生成-demo-网站以测试本地访问是否正常">在指定文件夹下部署 hexo 框架，并生成 Demo 网站以测试本地访问是否正常</h2>
+<ol>
+<li>新建个人博客的文件夹，推荐取名为 Blog 即可 在空目录下右键，点击 Git Bash here 打开 Git 终端<br>
+<img src="https://JHome17.github.io/post-images/1670344917417.png" alt="" loading="lazy"></li>
+<li>随后在 Git 中进行相关框架的自动初始化<br>
+<code>hexo init //在当前路径下初始化 hexo，生成相关文件</code></li>
+</ol>
+<blockquote>
+<p>提示：<br>
+在步骤一里如果使用 npm 直接安装 hexo 最好要有魔法上网，不然可能初始化弹出网络连不上 github；使用 cnpm 安装 hexo 的话会自动替换为淘宝的镜像，就不会存在这个问题<br>
+如果已经用 npm 安装 hexo，也可以手动修改，路径如下 你设定的扩展插件安装路径 \node_modules\hexo-cli\console\init.js 文件 如果没有设定路径，默认如下 C: \Users'你的用户名'\AppData\Roaming\npm\node_modules\hexo-cli\lib\console\init.js<br>
+注意：将：<br>
+<code>const GIT_REPO_URL = 'https://github.com/hexojs/hexo-starter.git';</code><br>
+替换为：<br>
+<code>const GIT_REPO_URL = 'https://github.com.cnpmjs.org/hexojs/hexo-starter.git';</code><br>
+再次运行 <code>hexo init</code> 即可</p>
+</blockquote>
+<ol start="3">
+<li>运行 hexo server 生成本地 Web 服务<br>
+<code>hexo s //生成静态网页文件</code><br>
+随后便会在下方显示出生成的本地网址以及运行端口，复制即可 ( 注意这里的复制不是 ctrl+c, 最好使用右键复制， 本质上 git 的操作是基于 Linux 的操作逻辑的 )<br>
+<img src="https://JHome17.github.io/post-images/1670345207575.png" alt="" loading="lazy"><br>
+进入该网站就可以看到生成好的模板网站了， 网站页面中的 Hello world 文档有几个常用命令给大家总结一下</li>
+</ol>
+<h2 id="这步会用到的-hexo-常用命令">这步会用到的 hexo 常用命令</h2>
+<ol>
+<li>
+<p>在本地运行静态服务器，按 <code>ctrl+c</code> 结束<br>
+<code>hexo server可以简写为hexo s</code></p>
+</li>
+<li>
+<p>新建一篇文章<br>
+警告：会自动生成一个 md 文件在这个路径里， 记得文章的头部 YAML 信息不能删， 要不然配置网站时读取不出来（blog 的文件夹、source_posts\）<br>
+<code>hexo new &quot;文章名字&quot;</code></p>
+</li>
+<li>
+<p>清除缓存文件和已生成的静态文件 ( public 文件夹 )<br>
+<code> hexo clean</code></p>
+<blockquote>
+<p>注意：在某些情况 ( 尤其是更换主题后 ) ，如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+</blockquote>
+</li>
+<li>
+<p>生成静态文件 全称: <code>hexo generate</code><br>
+<code> hexo g</code><br>
+通常和 clean 配套使用， 以防止出现些奇怪的问题</p>
+</li>
+<li>
+<p>上传部署至服务器<br>
+在配置好各个文件后， 使用以下命令上传部署至服务器， 即可实现网址访问<br>
+<code>hexo deploy可简写成hexo d</code></p>
+</li>
+</ol>
+<blockquote>
+<p>注意</p>
+</blockquote>
+<p>这里部署失败了很正常，分两种情况 第一种是第一次上传，需要和服务器链接并建立链接，成功率较低，多试几次即可 第二种是平常要更新网站，上传失败也是多上传几次 更多错误请看 Hexo 常见报错 大章节</p>
+<h1 id="第六步github新建代码仓很重要">第六步GitHub新建代码仓💕（很重要）</h1>
+<ol>
+<li>新建代码仓库，设置名字<br>
+<img src="https://JHome17.github.io/post-images/1670346561280.jpg" alt="" loading="lazy"><br>
+一定要与注册的时候的ID是一致的，后面跟上gitHub.io，图片上红字的打错了，看图片红框里面的<br>
+<img src="https://JHome17.github.io/post-images/1670346566738.jpg" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670346571475.jpg" alt="" loading="lazy"></li>
+</ol>
+<h1 id="第七步绑定ssh秘钥">第七步绑定ssh秘钥</h1>
+<p>目的: 建立本地文件和平台的连接通道；</p>
+<blockquote>
+<p>该教程区别于 2020 年及之前的教程主要是连接方式<br>
+Github 2020 年 10 月开始就改了不能直接使用密钥部署， 密钥存在风险， 现在要用 ssh 服务部署 ( 生成 ssh 密钥 )<br>
+Github 仓库的默认分支 ( branch ) 改了， 和以前的结构不一样， master 分支变为 main<br>
+补充一个 gitee 的 SSH 生成连接教程，大家可以参考下，挺简单的<a href="https://gitee.com/help/articles/4181#article-header0">https://gitee.com/help/articles/4181#article-header0</a></p>
+</blockquote>
+<ol>
+<li>
+<p>验证是否安装ssh<br>
+打开任意文件夹，在空白处，右键选择<code> Git Bash here</code><br>
+输入<code>ssh</code>回车，验证是否安装ssh<br>
+<img src="https://JHome17.github.io/post-images/1670347411521.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>使用 Git 注册 SSH<br>
+同样是使用 git bash 终端进行操作， ssh 工具是 git 自带的， 无需安装 首先输入代码， 其含义是根据 github 邮箱生成 ssh 密匙<br>
+<code>ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot; #引号内填入邮箱地址  Github 用这个</code><br>
+<code> ssh-keygen -t ed25519 -C &quot;xxxxx@xxxxx.com&quot; #Gitee 平台用这个</code><br>
+<img src="https://JHome17.github.io/post-images/1670347645208.jpg" alt="" loading="lazy"><br>
+<strong>重点：按 4 下 enter，记得每下间隔 1 秒左右</strong><br>
+<img src="https://JHome17.github.io/post-images/1670347701707.jpg" alt="" loading="lazy"></p>
+<p>生成地址如下：<code>C: \Users\你的 windows 账户名、.ssh #注意是一个叫.ssh 的文件夹</code><br>
+内有几个文件， 记住一定是<code>.pub</code>后缀的文件里的才是公钥， 使用记事本打开， 复制内部的代码<br>
+github 的密钥是 id_rsa ，gitee 是 id_ed25519 文件</p>
+</li>
+<li>
+<p>打开 Github, 点击左上角进入设置界面<br>
+<img src="https://JHome17.github.io/post-images/1670347928079.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>点击进入 SSH 这个界面<br>
+<img src="https://JHome17.github.io/post-images/1670347941686.png" alt="" loading="lazy"></p>
+<p>点击新建 SSH key 建立新的 keys<br>
+<img src="https://JHome17.github.io/post-images/1670347953264.png" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670347974386.png" alt="" loading="lazy"><br>
+输入无误点击下方<code>Add SSH key</code>即可绑定密钥与本电脑</p>
+<ol start="4">
+<li>验证与 github 是否绑定<br>
+输入代码并运行：<br>
+<code>ssh -T git@github.com</code><br>
+随后输入 <code>yes</code> 即可查询是否绑定成功<br>
+如果成功绑定， 最后会显示一串英文提示你成功<br>
+<img src="https://JHome17.github.io/post-images/1670348128619.jpg" alt="" loading="lazy"></li>
+</ol>
+<h1 id="第八步为hexo链接到github而做的配置">第八步为Hexo链接到GitHub而做的配置</h1>
+<blockquote>
+<p>github更新两个内容：</p>
+<ol>
+<li>本地上传到github的文件不再使用秘钥验证了，改用令牌token</li>
+<li>更改了默认分支</li>
+</ol>
+</blockquote>
+<ol>
+<li>修改配置文件<br>
+路径<code> \blog\ _config</code>, 在自己建立的博客根目录下找到<code>_config.yml</code>文件， 使用记事本打开, 把最后几行<code> deploy</code> 的文本替换成以下内容：<br>
+<img src="https://JHome17.github.io/post-images/1670586361962.jpg" alt="" loading="lazy"><br>
+<code>deploy:</code><br>
+<code>type: git</code><br>
+<code>repository: 你的仓库链接</code><br>
+<code>branch: main         //记得不能用 master,master 的都是老教程，因为 github 改分支名称了</code></li>
+</ol>
+<p><img src="https://JHome17.github.io/post-images/1670586371639.jpg" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670586356808.jpg" alt="" loading="lazy"></p>
+<ol start="2">
+<li>安装 hexo 的部署组件<br>
+在 blog 文件下右键打开 git bash 并输入以下代码<br>
+<code>npm install hexo-deployer-git --save</code></li>
+</ol>
+<blockquote>
+<p>这里的常见报错解决方法参考这篇文章：<a href="https://blog.csdn.net/qq_35457469/article/details/102924524">https://blog.csdn.net/qq_35457469/article/details/102924524</a></p>
+</blockquote>
+<ol start="3">
+<li>添加个人信息至配置文件</li>
+</ol>
+<blockquote>
+<p>** 2022/03/25 更新 **<br>
+这一步要在执行了步骤 npm install hexo-deployer-git --save 后能找到下面提到的文件夹<br>
+方法一 ( 推荐 )<br>
+<code>git config --global user.name &quot;xxx&quot; #就是仓库名称斜杠前的 id   配置用户名</code><br>
+<code>git config --global user.email &quot;xxx@xxx.com&quot;              # 配置邮件</code></p>
+</blockquote>
+<ol start="4">
+<li>部署到 Github 服务器<br>
+在 blog 文件下右键打开 git bash 并输入以下代码<br>
+<code>hexo d</code><br>
+//第一次的话 有可能会跳出输入github用户名密码啥的（不是账号的密码，是token码就是令牌，所以一定要仔细），我当时弄的时候是跳转网页登陆的，没有输入，如果要手动输入的话，注意一定不要输错，不然太麻烦了。</li>
+</ol>
+<p>上传部署网页到 github 上， 这里报错概率挺高<br>
+具体解决问题的几个方法：<br>
+** 方法一：**<br>
+重复 hexo d 重复尝试， 玄学问题， 大部分情况和网络有关</p>
+<p>** 方法二：**<br>
+干掉根目录下<code>.deploy_git</code>文件， git bash 中执行以下命令<br>
+<code>git config --global core.autocrlf false</code><br>
+<code>依次执行</code><br>
+<code>hexo clean    //清除缓存</code><br>
+<code>hexo g        //重新生成相应 deploy 文件</code><br>
+<code>hexo d        //上传服务器并部署新文件</code></p>
+<p>可能会用到令牌，以下为令牌的生成方式：<br>
+<img src="https://JHome17.github.io/post-images/1670587272917.jpg" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670587281216.jpg" alt="" loading="lazy"><br>
+给令牌设置时间和权限，这里是30天，到期更新一下，权限可以都勾上。<br>
+<img src="https://JHome17.github.io/post-images/1670587286243.jpg" alt="" loading="lazy"><br>
+<img src="https://JHome17.github.io/post-images/1670587290137.jpg" alt="" loading="lazy"><br>
+令牌生成后注意保存，因为只展示一次，关掉就找不到了。</p>
+<h1 id="hexo网站的修改网页的背景页面尺寸等修改">hexo网站的修改（网页的背景，页面尺寸等修改）</h1>
+<p>待更新。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://JHome17.github.io/post/she-ying-ji-chu/" class="post-title gt-a-link">
+                    😑摄影基础🎉📷
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">艺术与代码，机械艺术</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://JHome17.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
